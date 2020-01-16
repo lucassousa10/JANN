@@ -31,3 +31,11 @@ class Neuron {
         return 1 / (1 + Math.exp(-sum));
     }
 }
+
+
+
+
+
+
+
+
