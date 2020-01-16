@@ -8,9 +8,9 @@ export default class Layer {
         this.neurons = [];
         for (let i = 0; i < numNeurons; i++) {
             if (numPrevious === 0) {
-                this.neurons.push(new Neuron(numNeurons))
+                this.neurons.push(new Neuron(numNeurons));
             } else {
-                this.neurons.push(new Neuron(numPrevious))
+                this.neurons.push(new Neuron(numPrevious));
             }
         }
     }
@@ -18,7 +18,7 @@ export default class Layer {
     neuronsActivations(inputs) {
         const activations = [];
         for (let i = 0; i < this.numNeurons; i++) {
-            activations.push(this.neurons[i].activation(inputs))
+            activations.push(this.neurons[i].activation(inputs));
         }
         return activations;
     }

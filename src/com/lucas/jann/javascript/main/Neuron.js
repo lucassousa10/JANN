@@ -11,7 +11,7 @@ export default class Neuron {
     activation(inputs){
         let sum = this.bias;
         for (let i = 0; i < inputs.length; i++) {
-            sum += inputs[i] * this.weights[i]
+            sum += inputs[i] * this.weights[i];
         }
 
         //sigmoid
