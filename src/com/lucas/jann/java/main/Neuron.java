@@ -13,8 +13,12 @@ class Neuron {
         bias = Math.random();
     }
 
+    //these inputs comes from the previous layer.
+    //in the case of this neuron is living at the input
+    //layer, the inputs are, e.g., the main input passed
+    //by the user.
     double activation(double... inputs) {
-        if (inputs.length != weights.length){
+        if (inputs.length != weights.length) {
             throw new IllegalArgumentException(
                     "The length of inputs being " +
                             "activated in a neuron MUST BE " +
