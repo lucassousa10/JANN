@@ -27,8 +27,8 @@ class Neuron {
             sum += inputs[i] * weights[i];
         }
 
-        //sigmoid
-        return 1 / (1 + Math.exp(-sum));
+        return 1 / (1 + Math.exp(-sum)); //sigmoid
+        //return Math.max(0, sum); // ReLU; derivative is (sum > 0 ? 1 : 0)
     }
 }
 

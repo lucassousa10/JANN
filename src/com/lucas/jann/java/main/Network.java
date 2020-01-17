@@ -9,8 +9,10 @@ class Network {
     Network(int inputLayerSize,
             int[] hiddenLayersSizes,
             int outputLayerSize) {
+        //inits the input layer
         inputLayer = new Layer(inputLayerSize, 0);
 
+        //inits the hidden layers
         int tmpLastLayerSize = inputLayerSize;
         hiddenLayers = new Layer[hiddenLayersSizes.length];
         for (int i = 0; i < hiddenLayersSizes.length; i++) {
@@ -19,6 +21,7 @@ class Network {
             tmpLastLayerSize = hiddenLayersSizes[i];
         }
 
+        //inits the output layer
         outputLayer = new Layer(outputLayerSize, tmpLastLayerSize);
     }
 
@@ -26,7 +29,7 @@ class Network {
         if (inputs.length != inputLayer.numNeurons){
             throw new IllegalArgumentException("The amount of the main " +
                     "inputs passed MUST BE equals to the number of " +
-                    "neurons in input layer.");
+                    "neurons in the input layer.");
         }
 
         double[] lastOutput = inputLayer.neuronsActivations(inputs);
